@@ -18,8 +18,11 @@ public class ConfigClientApplication {
     @Value("${client.pseudo.property}")
     private String pseudoProperty;
 
+    @Value("${message}")
+    private String message;
+
     @GetMapping("/property")
     public ResponseEntity<String> getProperty() {
-        return ResponseEntity.ok(pseudoProperty);
+        return ResponseEntity.ok("client.pseudo.property= "+pseudoProperty+", message= "+message);
     }
 }

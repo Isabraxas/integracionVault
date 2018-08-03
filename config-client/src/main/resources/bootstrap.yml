@@ -4,8 +4,13 @@ spring:
     name: configclient
   cloud:
     config:
-      token: myroot
+      #token: myroot
+      token: 00000000-0000-0000-0000-000000000000
       uri: http://localhost:8888
       fail-fast: true
+    #vault:
+     #  token: 00000000-0000-0000-0000-000000000000
+     #  scheme: http
 server:
   port: 8081
+

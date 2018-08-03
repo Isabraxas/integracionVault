@@ -10,16 +10,12 @@ spring:
     config:
       server:
         native:
-          searchLocations: file://${user.home}/config-repo
+          searchLocations: file:///home/isvar/Documents/sensibleEjemplo/spring-cloud-configserver-vault-master/config-repo
         git:
-          uri: https://github.com/weekly-drafts/config-repo-spring-cloud-configserver-vault
+          uri: https://github.com/Isabraxas/cygnus-config
         vault:
           port: 8200
           host: 127.0.01
-          default-key: ${other.key:greeting}
+          default-key: ${other.default.key:application}
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: info, health, env
+password: provicional
